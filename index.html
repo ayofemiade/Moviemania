@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MovieMania - Your Ultimate Movie Destination</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="#"><img src="image/logo.jpeg" alt="MovieMania Logo"></a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Categories</a></li>
+                <li><a href="#">Top Rated</a></li>
+                <li><a href="#">Watchlist</a></li>
+            </ul>
+            <div class="search-user">
+                <div class="search-container">
+                    <input type="text" placeholder="Search movies, genres, actors...">
+                    <button type="submit"><i class="fas fa-search"></i></button>
+                </div>
+                <div class="user-profile">
+                    <a href="#"><i class="fas fa-user"></i></a>
+                </div>
+                <button id="darkModeToggle" aria-label="Toggle dark mode">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Welcome to MovieMania</h1>
+                <p>Discover the latest and greatest in cinema</p>
+                <a href="#" class="cta-button">Explore Now</a>
+            </div>
+        </section>
+
+        <section class="trending-movies">
+            <h2>Trending Movies</h2>
+            <div class="movie-grid" id="trendingMovies"></div>
+            <button id="loadMoreTrending" class="load-more">Load More</button>
+        </section>
+
+        <section class="categories">
+            <h2>Categories</h2>
+            <div class="category-grid">
+                <a href="#" class="category-item" data-category="action">Action</a>
+                <a href="#" class="category-item" data-category="comedy">Comedy</a>
+                <a href="#" class="category-item" data-category="drama">Drama</a>
+                <a href="#" class="category-item" data-category="sci-fi">Sci-Fi</a>
+                <a href="#" class="category-item" data-category="horror">Horror</a>
+                <a href="#" class="category-item" data-category="romance">Romance</a>
+            </div>
+        </section>
+
+        <section class="top-rated">
+            <h2>Top Rated Movies</h2>
+            <div class="movie-grid" id="topRatedMovies"></div>
+            <button id="loadMoreTopRated" class="load-more">Load More</button>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About MovieMania</h3>
+                <p>Your ultimate destination for movies, reviews, and more.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Connect With Us</h3>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Subscribe to Our Newsletter</h3>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Enter your email">
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 MovieMania. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <div id="movieModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="movieDetails"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
